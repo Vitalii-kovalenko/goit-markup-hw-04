@@ -18,6 +18,10 @@
    --primary-bg-hover-logo-color:  #2196F3;
    --primary-bg-logo-color:  #F5F4FA;
    --primary-bg-team-color:#F5F4FA; 
+   --primari-social-logo-color: #AFB1B8;
+   --primari-social-logo-hover-color: #FFFFFF;
+   --primari-hover-bg-color-logotype: #2196F3;
+
 }
 
 body {
@@ -113,26 +117,7 @@ li{
 .address .link{
    color: var(--primary-text-color);
 }
-.address .mail::before{
-   display: inline-block;
-   background-repeat: no-repeat;
-   background-image: url(../img/envelope.svg);
-   content: '';
-   width: 16px;
-  height: 11.2px;
-  margin-right: 10px;
-  align-items: center;
-}
-.address .tel::before{
-   display: inline-block;
-   background-repeat: no-repeat;
-   background-image: url(../img/logo-phone.svg);
-   content: '';
-   width: 10px;
-   height: 15px;
-   margin-right: 10px;
-   align-self: flex-end;
-}
+
 .box {
    display: flex;
    align-items: center;
@@ -171,7 +156,7 @@ li{
 
 }
 .button{
-   display: inline-block;
+   display: inline-flex;
    color: var(--primary-title2-color);
    background-color: var(--primary-bg-color);
    min-width: 200px;
@@ -227,7 +212,6 @@ li{
 }
 .advantages .antenna::before{
    background-image: url(../img/antenna.svg);
-   background-color: var(--primary-bg-color);
 }
 .advantages .clock::before{
    background-image: url(../img/clock.svg);
@@ -346,9 +330,34 @@ li{
    justify-content: center;
    padding-bottom: 24px;
 }
-.team .logo-social-network li:not(:last-child){
+.logo-social-network li:not(:last-child){
    margin-right: 10px;
 }
+.logo-social-network .logotype{
+   display: flex;
+   height: 44px;
+   width: 44px;
+   border-radius: 50%;
+   overflow: hidden;
+   color: var(--primari-social-logo-color);
+}
+.ftr .logotype-footer{
+   background-color:rgba(255, 255, 255, 0.1);
+   color:#FFFFFF;
+}
+.logo-social-network .logotype:hover,
+.logo-social-network .logotype:focus{
+   background-color: var(--primari-hover-bg-color-logotype); 
+   color: var(--primari-social-logo-hover-color);
+}
+ .icon{
+   margin: auto;
+   fill: currentColor;
+}
+.icon.icon-tel-mail{
+   margin-right: 10px;
+}
+
 .customers .title{
    margin-top: 0;
    margin-bottom: 50px;
@@ -365,21 +374,33 @@ li{
    margin-top: 0;
    margin-bottom: 0;
 }
-.customers .logotipe{
+ 
+
+.company{
    display: block;
-   border: 1px solid #AFB1B8;
-   box-sizing: border-box;
-   border-radius: 4px; 
-   width: calc((100% - 150px) / 3);
+   width: calc((100% - 150px) / 6);
    height: 90px;
+   justify-content: center;
+}
+.company .link{
+   border: 1px solid #AFB1B8;
+   border-radius: 4px;
+   color: #AFB1B8;
+   display: flex;
+   height: 90px;
+}
+.company .link:hover,
+.company .link:focus{
+   color: #2196F3;
+   border: 1px solid #2196F3;
+}
+.company .company-logo{
+   margin: auto;
+   fill: currentColor
    
 }
-.displayed{
-   display: block;
-   margin: auto;
-   padding-top: 22px;
-}
-.customers .logotipe + .logotipe{
+
+.company + .company{
    margin-left: 30px;
 }
 .container-footer{
@@ -415,6 +436,11 @@ li{
    margin-bottom: 0;
    color:var(--primary-title2-color);
 }
+.address-footer .mail-tel{
+   color: var(--primary-text-color);
+}
+
+
 
 .address-footer  a{
    color:var(--primary-address-ftr-color)
@@ -443,6 +469,17 @@ li{
 .ftr .butt{
    display: flex;
 }
+
+
+.button.button-footer::after{
+   display: inline-block;
+   background-image: url(../img/icon-send.svg);
+   background-size: contain;
+   content: '';
+   width: 24px;
+   height: 24px;
+   margin-left: 10px;
+}
 .text {
    margin-bottom: 0;
    font-weight: 400;
@@ -467,7 +504,7 @@ button {
    color: var(--primary-button-text-stok-color);
 }
 
-}
+
 button:hover,
 button:focus{
  background-color: var(--primary-button-hoverfocus-color);
@@ -499,6 +536,10 @@ button .btn{
    padding-bottom: 20px;
    padding-left: 20px;
    padding-right: 20px; 
+}
+.cart-content:hover,
+.cart-content:focus{
+   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .link.blok{
    display: block;
@@ -545,7 +586,7 @@ button .btn{
    color:var(--primary-title-color);
 }
 
-}
+
 .project .title{
    margin-top: 0;
    margin-bottom: 0;
