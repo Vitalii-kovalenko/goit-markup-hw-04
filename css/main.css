@@ -27,7 +27,6 @@
 body {
    background-color:var(--primary-title2-color);
    font-family: Roboto, sans-serif;
-   max-width: 1600px;
 }
 img{
    display: block;
@@ -132,8 +131,11 @@ li{
    color: var(--primary-hover-color);
 }
 .hero{
+   margin-left: auto;
+   margin-right: auto;
    text-align: center;
    height: 600px;
+   max-width: 1600px;
    background-color: #ccc;
    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8),rgba(47, 48, 58, 0.8)), url(../img/Header.jpg);
    background-repeat: no-repeat;
@@ -462,6 +464,7 @@ li{
 }
 .ftr .join-in{
    margin-left: 180px;
+   margin-right: auto;
 }
 .ftr .adr{
    display: block;
